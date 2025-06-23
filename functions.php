@@ -100,3 +100,10 @@ function dutch_excerpt_more( $more ) {
 	return '<a class="more-link" href="' . get_permalink($post->ID) . '">...</a>';
 }
 add_filter( 'excerpt_more', 'dutch_excerpt_more' );
+
+// Changed more text link
+function dutch_read_more_link() {
+	return '... <a class="more-link" href="' . get_permalink() . '">...continue reading</a>';
+}
+add_filter( 'the_content_more_link', 'dutch_read_more_link' );
+
