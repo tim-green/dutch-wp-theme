@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <main id="content">
-        <article class="post not-found">
+        <article id="post-0" class="post not-found">
             <header class="header">
                 <h2 class="entry-title"><?php esc_html_e( 'Error 404 - Page not found', 'dutch' ); ?></h2>
             </header>
