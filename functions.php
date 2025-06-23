@@ -47,3 +47,19 @@ function dutch_load_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dutch_load_scripts' );
 
+
+// Custom page navigation for dutch
+function dutch_page_navigation() {
+	global $wp_query;
+	if ( $wp_query->max_num_pages > 1 ) {
+		echo '<nav id="nav-below" class="navigation" role="navigation">';
+			echo '<ul><li class="nav-next" style="display: inline-block;">';
+			previous_posts_link( '&#10094; Newer' );
+			
+		echo '</li><li class="nav-previous" style="display: inline-block;">';
+			next_posts_link( 'Older &#10095;' );
+		echo '</li></ul>';
+		echo '</nav>';
+	}
+}
+
