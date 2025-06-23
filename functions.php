@@ -29,3 +29,9 @@ function dutch_setup() {
 }
 add_action( 'after_setup_theme', 'dutch_setup' );
 
+// Enqueue block editor styles
+function dutch_block_editor_styles() {
+	wp_enqueue_style( 'dutch-block-editor-css', get_theme_file_uri( '/assets/css/block-editor.css' ), false );
+}
+add_action( 'enqueue_block_editor_assets', 'dutch_block_editor_styles' );
+
