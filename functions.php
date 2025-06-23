@@ -107,3 +107,21 @@ function dutch_read_more_link() {
 }
 add_filter( 'the_content_more_link', 'dutch_read_more_link' );
 
+// Remove query strings from static resources 
+function _remove_script_version( $src ) {
+	$parts = explode( '?', $src );
+	return $parts[0];
+}
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+
+// Cleanup header
+add_action( 'do_feed_rss2_comments', 'disable_feeds', -1 );
+add_action( 'do_feed_atom_comments', 'disable_feeds', -1 );
+add_action( 'feed_links_show_comments_feed', '__return_false', -1 );
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wp_generator' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+
