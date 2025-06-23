@@ -22,3 +22,10 @@ function dutch_setup() {
 	// Remove wp_footer action that adds global inline styles
 	remove_action( 'wp_footer','wp_enqueue_global_styles',1 );
 
+	// Remove render_block filters
+	remove_filter( 'render_block','wp_render_duotone_support' );
+	remove_filter( 'render_block','wp_restore_group_inner_container' );
+	remove_filter( 'render_block','wp_render_layout_support_flag' );
+}
+add_action( 'after_setup_theme', 'dutch_setup' );
+
