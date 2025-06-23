@@ -70,3 +70,14 @@ function dutch_register_optimised_styles() {
 }
 add_action('init', 'dutch_register_optimised_styles');
 
+// Enqueue optimised styles 
+function dutch_enqueue_optimised_styles() {
+    if ( is_singular() && comments_open() || is_singular() && get_comments_number() ) {
+        wp_enqueue_style( 'comments-optimized' );
+    }
+    if ( in_array( 'jetpack/jetpack.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+		wp_enqueue_style( 'jetpack-optimized' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'dutch_enqueue_optimised_styles' );
+
