@@ -63,3 +63,10 @@ function dutch_page_navigation() {
 	}
 }
 
+// Register optimised styles 
+function dutch_register_optimised_styles() {
+    wp_register_style( 'comments-optimized', get_template_directory_uri() . '/assets/css/comments.css' );
+    wp_register_style( 'jetpack-optimized', get_template_directory_uri() . '/assets/css/jetpack.css' );
+}
+add_action('init', 'dutch_register_optimised_styles');
+
