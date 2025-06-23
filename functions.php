@@ -19,3 +19,6 @@ function dutch_setup() {
 	// Remove SVG and Global styles
 	remove_action( 'wp_enqueue_scripts','wp_enqueue_global_styles' );
 
+	// Remove wp_footer action that adds global inline styles
+	remove_action( 'wp_footer','wp_enqueue_global_styles',1 );
+
