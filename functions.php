@@ -81,3 +81,16 @@ function dutch_enqueue_optimised_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'dutch_enqueue_optimised_styles' );
 
+// Widget setup and register sidebar 
+function dutch_widgets_init() {
+	register_sidebar( array(
+		'name' => esc_html__( 'Sidebar Widget Area', 'dutch' ),
+		'id' => 'primary-widget-area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	) );
+}
+add_action( 'widgets_init', 'dutch_widgets_init' );
+
