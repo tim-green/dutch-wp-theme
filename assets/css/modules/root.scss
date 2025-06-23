@@ -4,3 +4,35 @@
   + Tim Green
 
 */
+
+/**
+  * for Root
+*/
+
+:root {
+	--font-sans-serif: Funnel Display Variable, sans-serif;
+	--font-monospace: 'Space Mono', monospace;
+	--bg-colour: #D90429;
+	--text-colour: #EDF2F4;
+    --text-dark-colour: #003049;
+	--hover-colour: #FDF0D5;
+    --bana-colour: #FFEBC0;
+	--block-colour: #2B2D42;
+	--border-px: 1px;
+    --border-radius: 12px;
+    
+}
+
+
+/* dark mode styles */
+@media (prefers-color-scheme: light) {
+	body {
+		-webkit-font-smoothing: initial;
+		-moz-osx-font-smoothing: initial;
+	}
+	:not(pre) > code[class*="language-"],
+	pre[class*="language-"] {
+		background: #1f1e1e;
+		filter: invert(100%) hue-rotate(180deg);
+	}
+}
