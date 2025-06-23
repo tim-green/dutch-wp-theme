@@ -35,3 +35,15 @@ function dutch_block_editor_styles() {
 }
 add_action( 'enqueue_block_editor_assets', 'dutch_block_editor_styles' );
 
+// enqueue styles and scripts 
+function dutch_load_scripts() {
+	wp_enqueue_style( 'dutch-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'dutch-main', get_theme_file_uri( '/build/css/app.css' ), false );
+	if ( ( ! is_admin() ) && is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+	// remove theme.json
+	wp_dequeue_style( 'global-styles' );
+}
+add_action( 'wp_enqueue_scripts', 'dutch_load_scripts' );
+
