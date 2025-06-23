@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel watch assets/js/app.js assets/css/app.scss --dist-dir build",
     "build": "parcel build assets/js/app.js assets/css/app.scss --dist-dir build"
-    
   },
   "keywords": [],
   "license": "ISC",
@@ -15,5 +14,9 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.15.4",
     "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "@fontsource-variable/funnel-display": "^5.2.6",
+    "@fontsource/space-mono": "^5.2.7"
   }
 }
