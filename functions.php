@@ -94,3 +94,9 @@ function dutch_widgets_init() {
 }
 add_action( 'widgets_init', 'dutch_widgets_init' );
 
+// Add more characters for excerpt 
+function dutch_excerpt_more( $more ) {
+	global $post;
+	return '<a class="more-link" href="' . get_permalink($post->ID) . '">...</a>';
+}
+add_filter( 'excerpt_more', 'dutch_excerpt_more' );
