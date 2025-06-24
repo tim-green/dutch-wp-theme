@@ -94,6 +94,15 @@ function dutch_widgets_init() {
 }
 add_action( 'widgets_init', 'dutch_widgets_init' );
 
+
+// Remove URL field from Comment form 
+function unset_url_field( $fields ) {
+    if( isset( $fields['url'] ) )
+       unset( $fields['url'] );
+       return $fields;
+}
+add_filter( 'comment_form_default_fields', 'unset_url_field' );
+
 // Add more characters for excerpt 
 function dutch_excerpt_more( $more ) {
 	global $post;
