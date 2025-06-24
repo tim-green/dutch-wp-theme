@@ -134,6 +134,9 @@ remove_action( 'wp_head', 'wp_generator' );
 remove_action( 'wp_head', 'wlwmanifest_link' );
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 
+// Disable JetPack CSS 
+add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
+add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
 
 // Disable emojis 
 function disable_emojis() {
