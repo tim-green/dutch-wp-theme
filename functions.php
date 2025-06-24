@@ -178,3 +178,5 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	return $urls;
 }
 
+// Disable CF7 validation 
+add_filter( 'wpcf7_validate_configuration', '__return_false' );
