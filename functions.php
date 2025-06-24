@@ -94,6 +94,17 @@ function dutch_widgets_init() {
 }
 add_action( 'widgets_init', 'dutch_widgets_init' );
 
+// Modify tag cloud widget 
+function mod_tag_cloud_widget() {
+	$args = array(
+		'smallest' => 1,
+		'largest' => 1.8,
+		'unit' => 'rem',
+		'echo' => false,
+	);
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'mod_tag_cloud_widget' );
 
 // Remove URL field from Comment form 
 function unset_url_field( $fields ) {
