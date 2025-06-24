@@ -178,5 +178,15 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	return $urls;
 }
 
+
+// Enqueue CF7 Scripts & styles only on CF7 pages
+function opt_cf7_dequeue() {
+	if ( ! is_page() ) {
+		wp_dequeue_script( 'contact-form-7' );
+		wp_dequeue_style( 'contact-form-7' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'opt_cf7_dequeue' );
+
 // Disable CF7 validation 
 add_filter( 'wpcf7_validate_configuration', '__return_false' );
