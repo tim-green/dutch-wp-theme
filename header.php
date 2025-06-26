@@ -15,9 +15,10 @@
                 </h1>
                 <div id="site-description"><?php bloginfo('description'); ?></div>
             </div>
+                <nav id="menu">
+                    <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+                </nav>
         </div>
-        <nav id="menu">
-         <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-        </nav>
+      
     </header>
 <div id="container">
