@@ -1,3 +1,15 @@
+<?php 
+/**
+ * The header for the theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="container">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package dutch
+ */
+
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

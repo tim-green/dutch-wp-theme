@@ -1,3 +1,13 @@
+<?php
+    /**
+	 * The template for entry summary
+	 *
+	 *
+	 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+	 *
+	 * @package dutch
+	 */
+?>
 <div class="entry-summary">
     <a href="<?php the_permalink(); ?>" rel="bookmark">
         <?php the_title( '<h2 class="entry-title-summary">', '</h2>' ); ?>

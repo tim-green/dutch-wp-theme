@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * The template for displaying 404 pages (Not Found)
+ *
+ * @link https://developer.wordpress.org/themes/functionality/404-pages/
+ *
+ * @package dutch
+ */
+    get_header(); 
+?>
     <main id="content">
         <article id="post-0" class="post not-found">
             <header class="header">

@@ -1,3 +1,13 @@
+<?php
+    /**
+	 * The custom template for entry/single post
+	 *
+	 *
+	 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+	 *
+	 * @package dutch
+	 */
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="header">
          <figure class="post-feature-image">

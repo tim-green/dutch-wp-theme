@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * The template to display archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package dutch
+ */
+    get_header(); 
+?>
         <header class="header">
             <h2 class="entry-title"><?php the_archive_title(); ?></h2>
         </header>
