@@ -190,3 +190,22 @@ add_action( 'wp_enqueue_scripts', 'opt_cf7_dequeue' );
 
 // Disable CF7 validation 
 add_filter( 'wpcf7_validate_configuration', '__return_false' );
+
+// Add Site Icon login logo 
+function dutch_login_logo() { ?>
+	<style type="text/css">
+		.login h1 a {
+			background-image: url( <?php site_icon_url() ?> );
+			background-size: contain;
+			width: 90px;
+			height: 90px;
+			border-radius: 45px;
+		}
+	</style>
+
+<?php }
+add_action( 'login_head', 'dutch_login_logo' );
+function dutch_login_url() {
+	return '/';
+}
+add_filter( 'login_headerurl', 'dutch_login_url' );
