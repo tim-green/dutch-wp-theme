@@ -178,6 +178,20 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	return $urls;
 }
 
+// Redirect attachment page to post 
+function dutch_redirect_attachment_page() {
+	if ( is_attachment() ) {
+		global $post;
+		if ( $post && $post->post_parent ) {
+			wp_redirect( esc_url( get_permalink( $post->post_parent ) ), 301 );
+			exit;
+		} else {
+			wp_redirect( esc_url( home_url( '/' ) ), 301 );
+			exit;
+		}
+	}
+}
+add_action( 'template_redirect', 'dutch_redirect_attachment_page' );
 
 // Enqueue CF7 Scripts & styles only on CF7 pages
 function opt_cf7_dequeue() {
