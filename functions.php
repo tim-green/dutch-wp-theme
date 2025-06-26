@@ -1,5 +1,4 @@
 <?php
-
 // Setup the dutch theme 
 function dutch_setup() {
 	add_theme_support( 'title-tag' );
@@ -16,6 +15,7 @@ function dutch_setup() {
 	if ( ! isset( $content_width ) ) { $content_width = 1080; }
 	register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'dutch' ) ) );
 	load_theme_textdomain( 'dutch', get_template_directory() . '/languages' );
+	
 	// Remove SVG and Global styles
 	remove_action( 'wp_enqueue_scripts','wp_enqueue_global_styles' );
 
@@ -46,7 +46,6 @@ function dutch_load_scripts() {
 	wp_dequeue_style( 'global-styles' );
 }
 add_action( 'wp_enqueue_scripts', 'dutch_load_scripts' );
-
 
 // Custom page navigation for dutch
 function dutch_page_navigation() {
