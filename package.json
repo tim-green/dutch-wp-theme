@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "@fontsource-variable/funnel-display": "^5.2.6",
-    "@fontsource/space-mono": "^5.2.7"
+    "@fontsource/space-mono": "^5.2.8"
   }
 }
