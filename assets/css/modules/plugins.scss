@@ -4,3 +4,64 @@
   + Tim Green
 
 */
+
+// Contact Form 7
+
+.wpcf7 {
+	input, textarea{
+		border-radius: var(--border-radius-4);
+
+		&:hover[type="submit"], &:hover#submit.submit{
+			color: var(--hover-colour) !important;
+			border: var(--border-px) solid var(--hover-colour);
+			cursor: pointer;
+		}
+
+		&:focus{
+			border-color: var(--bana-colour);
+		}
+	}
+
+	// Errors, Successfull Styles
+	.wpcf7-response-output{
+		background: var(--bana-colour) !important;
+		color: var(--black-colour) !important;
+		border-radius: var(--border-radius-4) !important;
+		border: none !important;
+	}
+}
+
+.wpcf7-not-valid-tip {
+	font-size: 0.938rem !important;
+	font-weight: inherit !important;
+	color: var(--bana-colour);
+}
+.wpcf7-response-output {
+	font-size: 0.938rem;
+	width: 90%;
+	max-width: 90%;
+	padding: 0.25rem 0.5rem;
+	margin: 2rem 0 0 !important;
+	border-color: #fff !important;
+	border: 1px solid;
+}
+.wpcf7-spinner{
+	background-color: var(--bana-colour) !important;
+	&::before{
+		background-color: var(--block-colour) !important;
+	}
+}
+form.wpcf7-form {
+	margin: 2.5rem 0 3.4rem;
+}
+
+input.wpcf7-form-control.wpcf7-text {
+	width: 90%;
+}
+
+.wpcf7 input[type="submit"],.wpcf7 input:active[type="submit"] {
+	font-size: 1.125rem;
+	font-weight: 700;
+	padding: .313rem 1rem .223rem;
+	width: auto;
+}
