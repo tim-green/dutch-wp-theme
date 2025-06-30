@@ -4,3 +4,221 @@
   + Tim Green
 
 */
+
+/**
+  * Site changes for media queries
+*/
+
+@media (max-width: 480px) {
+	div#site-title h1 {
+		font-size: 21vmin;
+	}
+	.wp-block-image,.wp-block-gallery,.wp-block-video,.wp-block-embed,
+	.wp-block-table,.wp-block-cover,.wp-block-media-text,.wp-block-calendar,
+	pre[class*="wp-block-"] {
+		max-width: none;
+		width: 99vw;
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.wp-block-gallery .wp-block-image {
+		transform: initial;
+	}
+	.wp-block-group .wp-block-image {
+		width: 88vw;
+	}
+	*[class^="wp-block-"] figcaption {
+		margin-left: 4.5vw;
+		margin-right: 4.5vw;
+	}
+	.wp-block-audio figcaption {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.wp-block-media-text__content p {
+		font-size: 1.5rem !important;
+	}
+	span.nav-abbr {
+		display: none;
+	}
+	.wpcf7-response-output {
+		margin: 1.5rem 0 0;
+	}
+}
+@media (min-width: 481px) and (max-width: 896px) and (orientation: landscape) {
+	#wrapper.hfeed {
+		max-width: 100vmin;
+	}
+}
+@media (min-width: 568px) {
+	div.entry-meta, footer.entry-footer {
+		border-top: var(--border-px) solid;
+		padding-top: 0.25rem;
+	}
+	body.page div.entry-content {
+		border-top: var(--border-px) solid;
+		padding-top: 2rem;
+		margin-bottom: 0;
+	}
+	img {
+		max-height: 90vw;
+	}
+}
+@media (min-width: 769px) {
+	html {
+		font-size: 17px;
+	}
+	div#wrapper.hfeed {
+		width: 80%;
+	}
+	img {
+		max-height: 80vw;
+	}
+	input.wpcf7-form-control.wpcf7-text {
+		width: 66%;
+	}
+}
+@media (min-width: 940px) {
+	header#header {
+		margin: 6.4rem 0;
+	}
+	div#branding {
+		margin-bottom: 0;
+	}
+	div#site-title h1 {
+		font-size: 4.75rem;
+		letter-spacing: -0.2rem;
+	}
+	nav#menu {
+		float: right;
+		margin-top: -4.1rem;
+	}
+	ul li.menu-item {
+		margin-right: 0;
+		margin-left: 0.625rem;
+	}
+	div#primary.widget-area {
+		margin-top: 2.62rem;
+	}
+	body.archive div#primary.widget-area,
+	body.search.search-results div#primary.widget-area {
+		margin-top: 1.58rem;
+	}
+	main#content,
+	footer#footer {
+		width: 66.67%;
+		float: left;
+		margin-right: -100%;
+		padding: 0;
+		max-width: 100%;
+	}
+	aside#sidebar {
+		width: 20%;
+		float: left;
+		margin-left: 77.67%;
+	}
+	img {
+		max-height: 53.34vw;
+	}
+	body.home.blog main#content,
+	body.home.blog footer#footer {
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+	.widget-container li {
+		font-size: 1.125rem;
+	}
+	aside#sidebar .tag-cloud-link {
+		margin: 0 0 0.5rem 0;
+		display: block;
+		font-size: 1.063rem !important;
+	}
+	input,
+	select,
+	textarea {
+		font-size: 1rem;
+	}
+	form.wpcf7-form {
+		margin-bottom: 2rem;
+	}
+	body.home.blog footer#footer,
+	footer#footer {
+		margin-bottom: 7rem;
+	}
+}
+@media (min-width: 1025px) {
+	#site-title h1 {
+		font-size: 5.25rem;
+		letter-spacing: -0.25rem;
+	}
+	.home h2 {
+		font-size: 2.41rem;
+	}
+}
+@media (min-width: 1282px) {
+	html {
+		font-size: 18px;
+	}
+	div#wrapper.hfeed {
+		width: 76.39%;
+	}
+	img {
+		max-height: 50.93vw;
+	}
+}
+@media (min-width: 1442px) {
+	body.home h2 {
+		font-size: 2.67rem;
+	}
+}
+@media (min-width: 1602px) {
+	html {
+		font-size: 19px;
+	}
+	div#wrapper.hfeed {
+		width: 66.67%;
+	}
+	img {
+		max-height: 44.45vw;
+	}
+}
+@media (min-width: 1922px) {
+	html {
+		font-size: 22px;
+	}
+	div#wrapper.hfeed {
+		width: 60%;
+	}
+	header#header {
+		margin: 7rem 0;
+	}
+	h1 {
+		font-size: 5.75rem;
+	}
+	body.home h2 {
+		font-size: 2.81rem;
+	}
+	nav#menu {
+		margin-top: -4.45rem;
+	}
+	img {
+		max-height: 40vw;
+	}
+}
+
+// Blocks MQ's
+
+@media (min-width: 782px) {
+	.wp-block-column {
+		margin: 0 1rem 2rem 0;
+		&:last-child{
+			margin: 0 0 2rem;
+		}
+
+		p{
+			font-size: 1rem;
+		}
+	}
+}
