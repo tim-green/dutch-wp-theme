@@ -90,7 +90,14 @@ iframe,
 	border-bottom-width: 0;
 }
 
-
+.wp-block-quote, blockquote{
+	padding: 2.0rem 1.55rem;
+	border-left: 0 !important;
+	border-radius: var(--border-radius-6);
+	p{
+		margin-top: .75rem !important;
+	}
+}
 .wp-block-quote.is-style-large p {
 	font-size: 1.25rem;
 }
